@@ -1,7 +1,7 @@
 # Recursive models issue
 This repo outlines an issue with serializing models that reference each other when serializing for a job
 
-##models
+## Models
 ### Book
 - Any time of book. 
 #### References
