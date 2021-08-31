@@ -51,7 +51,7 @@ class BreakIt extends Command
         $dictionary->save();
 
         $this->info('You should read the word "dispatched" after the constructor');
-        ReOrderShelfWithPublicProperties::dispatch($shelf, $dictionary);
+        ReOrderShelfWithPublicProperties::dispatch($shelf);
         $this->info('dispatched ReOrderShelfWithPublicProperties');
     }
 }

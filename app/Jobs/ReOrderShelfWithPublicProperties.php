@@ -19,7 +19,7 @@ class ReOrderShelfWithPublicProperties implements ShouldQueue
      *
      * @return void
      */
-    public function __construct(public Shelf $shelf, public Book $dictionary)
+    public function __construct(public Shelf $shelf)
     {
         dump('constructing ReOrderShelfWithPublicProperties');
     }

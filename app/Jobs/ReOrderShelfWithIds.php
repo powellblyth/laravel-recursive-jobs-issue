@@ -10,23 +10,21 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 
-class ReOrderShelfWithNotPublicProperties implements ShouldQueue
+class ReOrderShelfWithIds implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     public int $shelfId;
-    public int $dictionaryId;
 
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct(int $shelfId, int $dictionaryId)
+    public function __construct(int $shelfId)
     {
-        dump('constructing ReOrderShelfWithNotPublicProperties');
+        dump('constructing ReOrderShelfWithIds');
         $this->shelfId = $shelfId;
-        $this->dictionaryId = $dictionaryId;
     }
 
     /**
@@ -37,7 +35,6 @@ class ReOrderShelfWithNotPublicProperties implements ShouldQueue
     public function handle()
     {
         $shelf = Shelf::find($this->shelfId);
-        $dictionary = Book::find($this->dictionaryId);
-        dump('handled ReOrderShelfWithNotPublicProperties');
+        dump('handled ReOrderShelfWithIds');
     }
 }

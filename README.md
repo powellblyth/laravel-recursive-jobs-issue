@@ -19,8 +19,8 @@ You can run
 you will see
 ```
 You should read the word "dispatched" after the contructor
-"constructing ReOrderShelfWithNotPublicProperties"
-"handled ReOrderShelfWithNotPublicProperties"
+"constructing ReOrderShelfWithIds"
+"handled ReOrderShelfWithIds"
 dispatched
 ```
 

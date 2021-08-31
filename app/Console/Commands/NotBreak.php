@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands;
 
-use App\Jobs\ReOrderShelfWithNotPublicProperties;
+use App\Jobs\ReOrderShelfWithIds;
 use App\Models\Book;
 use App\Models\Shelf;
 use Illuminate\Console\Command;
@@ -51,7 +51,7 @@ class NotBreak extends Command
         $dictionary->save();
 
         $this->info('You should read the word "dispatched" after the contructor');
-        ReOrderShelfWithNotPublicProperties::dispatch($shelf->id, $dictionary->id);
+        ReOrderShelfWithIds::dispatch($shelf->id);
         $this->info('dispatched');
     }
 }
